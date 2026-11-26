@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Non-Metal Element Finder</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            display: grid;
+            place-items: center;
+            background: #f1f5fb;
+            color: #1d2939;
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            width: min(100%, 620px);
+            overflow: hidden;
+            border: 5px solid #000000;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 12px 30px #182b501a;
+        }
+
+        header {
+            padding: 22px;
+            background: #32d432;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        header p {
+            margin: 6px 0 0;
+            font-size: 14px;
+        }
+
+        main {
+            padding: 22px;
+        }
+
+        .instructions {
+            margin: 0 0 18px;
+            padding: 12px;
+            border-radius: 7px;
+            background: #d9f6fc;
+            color: #000000;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 11px 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font: inherit;
+        }
+
+        input:focus {
+            border-color: #1169f7;
+            outline: 2px solid #1769ed33;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 11px;
+            border: 0;
+            border-radius: 6px;
+            background: #c52b20;
+            color: white;
+            font: inherit;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #c52b20;
+        }
+
+        .message {
+            margin: 10px 0 0;
+            color: #c52b20;
+            font-size: 14px;
+        }
+
+        h2 {
+            margin: 22px 0 9px;
+            color: #1169f7;
+            font-size: 17px;
+        }
+
+        .result {
+            padding: 14px;
+            border-left: 4px solid #1169f7;
+            border-radius: 6px;
+            background: #f5f7fa;
+            line-height: 1.7;
+        }
+
+        .result[hidden] {
+            display: none;
+        }
+
+        body {
+            background-color: #1e293b;
+        }
+
+        
+        
+        style>
+
+
+
+        
+
+       
+        
+    </style>
+</head>
+<body>
+
+    <div class="card">
+    
+        <header>
+            <h1>Non-Metal Elements</h1>
+            <p>Periodic table information finder</p>
+        </header>
+        <main>
+            <form id="lookup-form">
+                <label for="element_input">Element symbol or name</label>
+                <input id="element_input" type="text" placeholder="Enter a symbol or name" required>
+                <button type="submit">Check Details</button>
+            </form>
+            <p id="lookup-message" class="message" role="status" aria-live="polite"></p>
+            <h2>Result</h2>
+            <section id="result-card" class="result" aria-live="polite" hidden>
+                <div><strong>Symbol:</strong> <span id="result-symbol"></span></div>
+                <div><strong>Element:</strong> <span id="result-name"></span></div>
+                <div><strong>Atomic Number:</strong> <span id="result-number"></span></div>
+                <div><strong>Atomic Mass:</strong> <span id="result-mass"></span></div>
+            </section>
+        </main>
+        
+    </div>
+    <script type="py" src="./main.py"></script>
+</body>
+</html>
